@@ -13,10 +13,10 @@ on:
   workflow_dispatch:
 
 env:
-  MANIFEST: https://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni -b twrp-10.0-deprecated
-  DEVICE: KD7
-  DT_LINK: https://github.com/mastersenpai0405/recovery_device_tecno_KD7
-  DT_PATH: device/tecno/KD7
+  MANIFEST: https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp
+  DEVICE: b4q
+  DT_LINK: https://github.com/NicoProo5405/android_device_samsung_b4q
+  DT_PATH: device/samsung/b4q
   TARGET: recoveryimage
   TZ: Asia/manila
 
@@ -62,7 +62,7 @@ jobs:
          env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
          with:
-          tag_name: TWRP_10.0
-          name: TWRP-KD7
+          tag_name: TWRP_12.1
+          name: TWRP-b4q
           files: | 
-            work/out/target/product/KD7/recovery.img
+            work/out/target/product/b4q/recovery.img
